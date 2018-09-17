@@ -15,38 +15,54 @@
 <body>
 <!-- #4 #one #page -->
 <div id="channels">
-    <h1>
+    <h1 class="channel-app-bar">
         <!-- #3 #channels #moocus the talkative duck-->
-        <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" style="height: 56px;">
+        <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!">
         chatter|app
     </h1>
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
+
     <ul>
         <li>#Yummy
             <!-- #3 #channels #favorite this is not starred -->
+            <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow"></span>
         </li>
 
         <!-- #4 #channel is #highlighted -->
         <li class="selected">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
+            <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
+            </span>
         </li>
         <li>#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
+            <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
+            </span>
         </li>
         <li>#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
+            <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
+            </span>
         </li>
         <li>#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
+            <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
+            </span>
         </li>
     </ul>
+
 
     <!-- #3 #tab-bar #container -->
     <!-- #4 #sweat #tab-bar -->
@@ -79,6 +95,7 @@
         </small>
     </h1>
 
+    <div id="messages">
     <!-- #3 #chat #container -->
     <!-- #4 assign a #class to all your #messages to address them with css -->
     <!-- #4 apply a class "own" to your #messages to align them separately with #margins -->
@@ -169,6 +186,16 @@
         <p>北京</p>
         <button>+5 min.</button>
     </div>
+
+    </div>
+
+    <div id="chat-bar">
+        <button id="emojis-button">
+        <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="smiley face">
+        </button>
+        <div id="emojis">😁 😂 😃 😄 😅 😆 😇 </div>
+    </div>
+
 </div>
 
 </body>
