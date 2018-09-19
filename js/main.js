@@ -11,8 +11,8 @@ function switchChannel(channelName) {
 
 /* changes the app bar's star to unstarred when clicking on a channel */
 function unfillStar() {
-    document.getElementById('bar-star').src="http://ip.lfe.mw.tum.de/sections/star-o.png";
-    document.getElementById('bar-star').alt="not starred";
+    $('#bar-star').attr("src","http://ip.lfe.mw.tum.de/sections/star-o.png");
+    $('#bar-star').attr("alt","not starred");
 }
 
 /* changes the app bar's star to starred when clicking on it */
