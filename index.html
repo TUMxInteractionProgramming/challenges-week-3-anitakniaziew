@@ -9,6 +9,12 @@
 
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 
     
 </head>
@@ -17,14 +23,14 @@
 <div id="channels">
     <h1 class="channel-app-bar">
         <!-- #3 #channels #moocus the talkative duck-->
-        <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!">
+        <img id="moocus" src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!">
         chatter|app
     </h1>
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
 
     <ul>
-        <li>#Yummy
+        <li onclick="switchChannel('#Yummy'); unfillStar();">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -32,7 +38,7 @@
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li class="selected" onclick="switchChannel('#SevenContinents'); unfillStar();">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
@@ -40,21 +46,21 @@
             <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
             </span>
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('#KillerApp'); unfillStar();">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
             <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
             </span>
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('#FirstPersonOnMars'); unfillStar();">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
             <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-right-512.png" alt="right arrow">
             </span>
         </li>
-        <li>#Octoberfest
+        <li onclick="switchChannel('#Octoberfest'); unfillStar();">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -68,17 +74,17 @@
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="new" class="selected" onclick="selectTab(this.id);">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button id="trending" onclick="selectTab(this.id);">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+        <button id="favorites" onclick="selectTab(this.id);">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
@@ -89,10 +95,12 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
+        <span id="main-channel">#SevenContinents</span>
         <small>by
-            <strong>cheeses.yard.applies</strong>
+            <a id="main-location" href="http://w3w.co/cheeses.yard.applies" target="_blank"><strong>cheeses.yard.applies</strong>
+            </a>
         </small>
+        <img id="bar-star" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred" onclick="fillStar()">
     </h1>
 
     <div id="messages">
@@ -190,7 +198,7 @@
     </div>
 
     <div id="chat-bar">
-        <button id="emojis-button">
+        <button id="emojis-button" onclick="showEmoji()">
         <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="smiley face">
         </button>
         <div id="emojis">😁 😂 😃 😄 😅 😆 😇 </div>

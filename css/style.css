@@ -53,11 +53,22 @@ h1 {
 h1.channel-app-bar {
     padding-left: 72px;
 }
-h1 img {
+h1 img#moocus {
     position: absolute;
     left: 16px;
     bottom: 0px;
     height: 56px;
+}
+
+h1 a:visited, h1 a:link {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 img#bar-star {
+    position: absolute;
+    right: 16px;
 }
 
 
@@ -213,6 +224,7 @@ li .channel-meta {
 }
 
 #emojis {
+    display: none;
     background-color: white;
     border: 1px solid black;
     font-size: 28px;
@@ -225,6 +237,5 @@ li .channel-meta {
     height: 250px;
     width: 250px;
 }
-
 
 
